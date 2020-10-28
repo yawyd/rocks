@@ -22,7 +22,7 @@ dependencies = {
 
 build = {
    type = "command",
-   build_command = "$(MAKE) LUA_BINDIR=$(LUA_BINDIR)  LUA_LIBDIR=$(LUA_LIBDIR)  LUA_INCDIR=$(LUA_INCDIR)",
+   build_command = "$(MAKE) LUA_BINDIR=$(LUA_BINDIR)  LUA_LIBDIR=$(LUA_LIBDIR)  LUA_INCDIR=$(LUA_INCDIR) CFLAGS='-Wno-implicit-fallthrough'",
    install_command = [[
 cp -r async $(LUADIR)/
 cp luv.so lhttp_parser.so $(LIBDIR)/
